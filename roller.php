@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo '<h4>Invalid request.</h4>';
 }
 ?>
-<form action="index.php" method="post">
+<form action="index.html" method="post">
     <br>
     <button type="submit" class="btn btn-success">Roll again</button>
 </form>
