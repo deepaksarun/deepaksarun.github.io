@@ -12,7 +12,9 @@
         padding: 0;
         display: flex;
         background-color: black;
-        height: 20vh;    
+        justify-content: center;
+        align-items: center;
+        height:50vh  
 
     }
     main{
@@ -32,7 +34,7 @@
         align-content: center;
 
         border-style: 5px solid black;
-        background-color: rgb(140, 0, 158);
+        background-color: rgb(255, 8, 214);
 
     }
     .yes{
@@ -49,8 +51,6 @@
 
     .no:active{
         margin-top: -100px;
-        background-color: transparent;
-        border-style: none;
         font-weight: 900;
         color: azure;
         box-shadow: unset;
@@ -78,8 +78,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
-
+    }
+    label{
+        position: absolute;
+        color: beige;
+        font-weight: 900;
+ 
     }
     .tom{
         border-style: 2px double pink ;
@@ -107,5 +113,6 @@
         <button class="no"><img src="https://media.gifbuz.com/resources/q1A73MLj2H4Z3aEyyMYMD1671343098466" >No</button>
     </main>
     </div>
+    <label>Will You Marry Me ?</label>
 </body>
 </html>
