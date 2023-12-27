@@ -11,53 +11,40 @@
         margin: 0;
         padding: 0;
         display: flex;
-        background-color: rgb(255, 101, 173);
-        justify-content: center;
-        align-items: center;
-        height: 143vh;
+        background-color: black;
+
     }
     main{
         display:grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .b{
+        display:grid;
+
+        grid-template-rows: 1fr ;
     }
 
     .no{
 
         align-content: center;
         padding: 10px 50px 10px 50px;
-        position: absolute;
-        right:690px;
-        border-style: 1px double black;
+        border-style: 5px solid black;
         background-color: rgb(140, 0, 158);
 
     }
     .yes{
-        position: absolute;
-        right:1000px;
+
         padding: 10px 50px 10px 50px;
         border-style: 1px double black;
         background-color: rgb(140, 0, 158);
 
     }
-    @keyframes glow {
-        to{
-            box-shadow: 0px 0px 30px rgb(255, 67, 67);
-        }  
-        from{
-            box-shadow: 0px 0px 50px rgb(253, 84, 245);
-        }  
-    }
 
-    label{
-        position: absolute;
-        color: azure;
-        font-family: monospace;
-        font-weight: 1000;
-        font-size: 18px;
-        top: 705px;
-        right: 720px;
-    }
+
+
+
     .no:active{
         margin-top: -100px;
         background-color: transparent;
@@ -74,6 +61,7 @@
         transition: ease-out 1ms;
 
     }
+
     img{
         height: 50px;
         width: 50px;
@@ -93,20 +81,29 @@
 
 
     }
-        
+    .tom{
+        border-style: 2px double pink ;
+        border-radius: 10px;
+        height:500px;
+        width: 500px;
+        margin-bottom: 100px;
+
+    }
+
 </style>
 <script>
 
 </script>
 </head>
 
-<body>
+<body class="container">
 
-    <div class="container">
+    <div b>
+        <img class= tom src="https://media3.giphy.com/media/1wmOyZYoGzz003R03Y/200w.gif?cid=6c09b95209d9rz96i0tq6x8pfdwk3h3siy4u7181zhk8aetj&ep=v1_gifs_search&rid=200w.gif&ct=g">
     <main>
-
-        <button class="yes"><img src=https://media1.giphy.com/media/8FVcEQwv9pgiXzPYu6/giphy.gif?cid=6c09b9528r9fw0t11qbkbkkhurla2wmuj0473ihwy6fmm9h7&ep=v1_stickers_related&rid=giphy.gif&ct=s >yes</button>
-        <label> please click yes </label>
+        <a href="prop.html">
+            <button class="yes"><img src=https://media1.giphy.com/media/8FVcEQwv9pgiXzPYu6/giphy.gif?cid=6c09b9528r9fw0t11qbkbkkhurla2wmuj0473ihwy6fmm9h7&ep=v1_stickers_related&rid=giphy.gif&ct=s >yes</button>
+        </a>
         <button class="no"><img src="https://media.gifbuz.com/resources/q1A73MLj2H4Z3aEyyMYMD1671343098466" >No</button>
     </main>
     </div>
