@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clock</title>
+
+<style>
+    body{
+        background-color: black;
+        display: flex;
+        right: 50%;
+        justify-content: center;
+    }
+    .container{
+        background-color: transparent;
+        background-image: url(https://media4.giphy.com/media/1pmatQ3LcP5XFYxSWF/giphy.gif?cid=ecf05e47cd2c64vt1x4dydyxdejse4rtom4atf9pqrt19irp&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+        margin-top: calc(20%);
+        padding:20px 50px 20px 50px;
+        border-radius: 80px;
+        box-shadow: inset 20px 20px 40px 10px rgba(0, 0, 0, 0.466);
+    }
+    .container p{
+        justify-content: center;
+        align-self: center;
+        color: white;
+        margin:0%;
+        padding:0;
+        font-size: 50px;
+        font-weight: 1000;
+        font-family:sans-serif;
+    }
+
+    .container:hover{
+        transition: all 0.8s;
+        background-color: transparent;
+        background-image: url(https://media4.giphy.com/media/1pmatQ3LcP5XFYxSWF/giphy.gif?cid=ecf05e47cd2c64vt1x4dydyxdejse4rtom4atf9pqrt19irp&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+        background-clip: border-box;
+        padding:210px 50px 210px 50px;
+        margin-top: calc(4.98%);
+        border-radius: 500px;
+        box-shadow: inset 20px 20px 60px 10px rgba(0, 0, 0, 0.479);
+        p{
+            color:rgb(255, 255, 255);
+        }
+        bady{
+            background-color:white;
+        }
+    }
+</style>
+
+<script>
+    function displayTime(){
+        var d = new Date();
+        var hour = d.getHours();
+        var min = d.getMinutes();
+        var sec = d.getSeconds();
+        var ampm = "AM"
+        if (hour>=12) {
+        hour=hour-12
+        ampm="PM"
+        }
+        if (hour==0){
+            hour=12
+        }
+        if(hour<10) {
+        hour= "0"+ hour
+        }
+        if(min<10) {
+        min= "0"+ min
+        }
+        if(sec<10) {
+        sec= "0"+ sec
+        }
+
+        document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec + " " + ampm;
+    }
+
+        
+    setInterval(displayTime,1);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <p id="clock"></p>
+    </div>
+
+</body>
+</html>
